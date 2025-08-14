@@ -1,0 +1,73 @@
+% Pandoc LaTeX template with unicode-math and STIX Two fonts
+% Save as docs/templates/pandoc_ieee_math.tex and use with pandoc -H
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[11pt]{article}
+
+% Page and font setup
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmainfont{STIX Two Text}
+\setmathfont{STIX Two Math}
+
+% Links black for camera-ready
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+
+% Pandoc tight list support
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% Inject Pandoc highlighting macros (defines \NormalTok, \StringTok, etc.)
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+% Graphics and tables
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{siunitx}
+
+% Define pandocbounded macro used by newer Pandoc for bounded content
+\providecommand{\pandocbounded}[1]{#1}
+
+% Code block support for Pandoc (Shaded/Highlighting)
+\usepackage{xcolor}
+\usepackage{fancyvrb}
+\usepackage{framed}
+\makeatletter
+\@ifundefined{Shaded}{%
+  \definecolor{shadecolor}{RGB}{248,248,248}%
+  \newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}%
+}{}
+\makeatother
+\providecommand{\VerbBar}{|}
+\providecommand{\VERB}{\Verb}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+
+% Tighter spacing knobs (use carefully)
+\setlength{\textfloatsep}{10pt}
+\setlength{\floatsep}{8pt}
+\setlength{\intextsep}{10pt}
+
+$if(title)$
+\title{$title$}
+$endif$
+
+$if(author)$
+\author{$for(author)$$author$$sep$ \\$endfor$}
+$endif$
+
+$if(date)$
+\date{$date$}
+$else$
+\date{}
+$endif$
+
+\begin{document}
+\maketitle
+
+$body$
+
+\end{document}
+

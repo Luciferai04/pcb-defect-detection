@@ -1,0 +1,93 @@
+# Production .gitignore for PCB Defect Detection Research
+
+# ===================
+# UNNECESSARY FOR PRODUCTION
+# ===================
+
+# Large model files (>25MB each)
+*.pth
+*.pkl
+*.h5
+*.weights
+
+# Virtual environments
+venv/
+analysis_env/
+__pycache__/
+*.pyc
+*.pyo
+
+# Large datasets and experimental outputs
+pcb_defect_adapter/experiments_*/
+pcb_defect_adapter/research_*/
+analysis_outputs/
+ssl_models/
+checkpoints/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Archive files
+*.zip
+*.tar.gz
+ieee_paper_submission*.zip
+ieee_paper_submission*.tar.gz
+
+# Temporary/generated files
+*.json
+!requirements.json
+!package.json
+test_results*.json
+integration_test_results.json
+demo_report.json
+results.json
+ssl_evaluation_*.json
+feature_test_results.json
+fix_verification_results.json
+
+# Generated images/plots (keep only essential ones)
+ssl_evaluation_summary.png
+*.png
+!docs/figures/*.png
+!outputs/explainability/*.png
+
+# Development/debug files
+*_draft.md
+*_original.md
+research_paper_draft.md
+README_original.md
+COMPREHENSIVE_RESEARCH_REPORT.md
+RESEARCH_PAPER_GENERATED.md
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Desktop.ini
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Research experiment directories
+research/
+domains/
+experiments/
+utils/
