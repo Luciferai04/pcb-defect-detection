@@ -31,8 +31,8 @@ def main():
     
     args = parser.parse_args()
     
-    print(f"🔍 Processing images in: {args.input_dir}")
-    print(f"📁 Results will be saved to: {args.output_dir}")
+    print(f" Processing images in: {args.input_dir}")
+    print(f" Results will be saved to: {args.output_dir}")
     
     return 0
 

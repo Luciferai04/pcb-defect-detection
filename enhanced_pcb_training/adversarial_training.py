@@ -595,7 +595,7 @@ def create_adversarial_trainer(model: nn.Module,
 
 if __name__ == "__main__":
     # Demonstration of adversarial training
-    print("🛡️ Enhanced Adversarial Training for PCB Defect Detection")
+    print(" Enhanced Adversarial Training for PCB Defect Detection")
     print("=" * 60)
     
     # Example configuration
@@ -607,13 +607,13 @@ if __name__ == "__main__":
         component_aware=True
     )
     
-    print(f"✅ Configuration created")
-    print(f"📊 Epsilon: {config.epsilon:.4f}")
-    print(f"🎯 PGD steps: {config.num_steps}")
-    print(f"🔧 TRADES beta: {config.trades_beta}")
-    print(f"🏗️ Structure preservation: {config.preserve_structure}")
-    print(f"🔍 Component-aware attacks: {config.component_aware}")
+    print(f" Configuration created")
+    print(f" Epsilon: {config.epsilon:.4f}")
+    print(f" PGD steps: {config.num_steps}")
+    print(f" TRADES beta: {config.trades_beta}")
+    print(f" Structure preservation: {config.preserve_structure}")
+    print(f" Component-aware attacks: {config.component_aware}")
     
-    print(f"\n✨ Adversarial training ready for deployment!")
-    print(f"🎯 Expected benefits: Improved robustness and generalization")
-    print(f"📈 Recommended for: Industrial PCB inspection systems")
+    print(f"\n Adversarial training ready for deployment!")
+    print(f" Expected benefits: Improved robustness and generalization")
+    print(f" Recommended for: Industrial PCB inspection systems")

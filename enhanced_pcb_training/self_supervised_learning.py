@@ -369,13 +369,13 @@ if __name__ == "__main__":
         defect_aware_aug=True
     )
     
-    print(f"✅ SimCLR configuration created")
-    print(f"🌡️ Temperature: {config.temperature}")
-    print(f"📏 Projection dimension: {config.projection_dim}")
-    print(f"🔄 Augmentation strength: {config.color_jitter_strength}")
-    print(f"🔧 Component preservation: {config.preserve_components}")
-    print(f"🎯 Defect-aware augmentation: {config.defect_aware_aug}")
+    print(f" SimCLR configuration created")
+    print(f" Temperature: {config.temperature}")
+    print(f" Projection dimension: {config.projection_dim}")
+    print(f" Augmentation strength: {config.color_jitter_strength}")
+    print(f" Component preservation: {config.preserve_components}")
+    print(f" Defect-aware augmentation: {config.defect_aware_aug}")
     
-    print(f"\n✨ SimCLR ready for self-supervised pre-training!")
-    print(f"🎯 Expected benefits: Better feature representations without labels")
-    print(f"📈 Use case: Pre-training on large unlabeled PCB datasets")
+    print(f"\n SimCLR ready for self-supervised pre-training!")
+    print(f" Expected benefits: Better feature representations without labels")
+    print(f" Use case: Pre-training on large unlabeled PCB datasets")

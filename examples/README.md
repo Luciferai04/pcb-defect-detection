@@ -1,8 +1,8 @@
-# 📋 Usage Examples
+#  Usage Examples
 
 This directory contains practical examples demonstrating how to use the PCB defect detection system.
 
-## 🚀 Quick Start Examples
+##  Quick Start Examples
 
 ### 1. Basic Inference
 Process a single PCB image and get predictions.
@@ -45,7 +45,7 @@ python examples/batch_processing.py \
 - JSON file with detailed results
 - Summary report with statistics
 
-## 📁 Example Files
+##  Example Files
 
 | File | Description | Usage |
 |------|-------------|-------|
@@ -53,7 +53,7 @@ python examples/batch_processing.py \
 | `batch_processing.py` | Directory batch processing | Production workflows |
 | `README.md` | This file | Documentation |
 
-## 🔧 Common Usage Patterns
+##  Common Usage Patterns
 
 ### Testing New Models
 ```bash
@@ -82,7 +82,7 @@ python examples/batch_processing.py \
     --format csv
 ```
 
-## 📊 Output Formats
+##  Output Formats
 
 ### JSON Results
 ```json
@@ -108,7 +108,7 @@ python examples/batch_processing.py \
 | pcb1.jpg | short_circuit | 0.923 | 0.015 |
 | pcb2.jpg | normal | 0.891 | 0.012 |
 
-## 🛠️ Customization
+##  Customization
 
 ### Adding New Examples
 Create new example scripts following this pattern:
@@ -140,7 +140,7 @@ All examples are designed to be easily customizable:
 3. **Processing options**: Add new visualization or analysis
 4. **Export formats**: Add new output formats
 
-## 🔍 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -171,7 +171,7 @@ python examples/basic_inference.py --image test.jpg
 3. Check the troubleshooting section in the main README
 4. Open an issue on GitHub if problems persist
 
-## 📚 Next Steps
+##  Next Steps
 
 After trying these examples:
 

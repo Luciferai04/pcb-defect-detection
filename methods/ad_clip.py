@@ -513,7 +513,7 @@ def create_ad_clip_model(classnames: List[str], device: str = "cuda",
 
 if __name__ == "__main__":
     # Demonstration of AD-CLIP implementation
-    print("🔬 AD-CLIP: Prompt-Space Domain Adaptation")
+    print(" AD-CLIP: Prompt-Space Domain Adaptation")
     print("=" * 50)
     
     # Example usage for medical imaging domain
@@ -532,9 +532,9 @@ if __name__ == "__main__":
             entropy_weight=0.1
         )
         
-        print(f"✅ Model created successfully")
-        print(f"📊 Parameter efficiency: {model.efficiency_ratio:.4f}")
-        print(f"🎯 Trainable parameters: {model.trainable_parameters:,}")
+        print(f" Model created successfully")
+        print(f" Parameter efficiency: {model.efficiency_ratio:.4f}")
+        print(f" Trainable parameters: {model.trainable_parameters:,}")
         
         # Test forward pass
         dummy_images = torch.randn(4, 3, 224, 224)
@@ -543,8 +543,8 @@ if __name__ == "__main__":
             print(f"🧪 Forward pass successful: {outputs['logits'].shape}")
         
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f" Error: {e}")
     
-    print(f"\n✨ AD-CLIP ready for domain adaptation!")
-    print(f"🎯 Expected improvement: +7.6% over vanilla CLIP")
-    print(f"📈 Optimal for: Medical, Remote Sensing, Microscopy, Materials")
+    print(f"\n AD-CLIP ready for domain adaptation!")
+    print(f" Expected improvement: +7.6% over vanilla CLIP")
+    print(f" Optimal for: Medical, Remote Sensing, Microscopy, Materials")

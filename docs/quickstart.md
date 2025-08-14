@@ -2,7 +2,7 @@
 
 Get up and running with PCB defect detection in minutes! This guide walks you through the essential steps from installation to your first inference.
 
-## 🚀 5-Minute Setup
+##  5-Minute Setup
 
 ### Step 1: Installation
 
@@ -13,7 +13,7 @@ cd pcb-defect-detection
 pip install -r requirements.txt
 
 # Verify installation
-python -c "import torch; print('✓ Setup complete!')"
+python -c "import torch; print(' Setup complete!')"
 ```
 
 ### Step 2: Download Sample Data
@@ -34,7 +34,7 @@ wget -O data/samples/pcb_defect.jpg "https://example.com/sample_pcb_defect.jpg"
 python -m api.inference --image data/samples/pcb_defect.jpg
 ```
 
-## 📋 Basic Usage Examples
+##  Basic Usage Examples
 
 ### 1. Load and Use Pre-trained Model
 
@@ -101,7 +101,7 @@ print(f"Strategy: {config.al_strategy}")
 print(f"Device: {config.device}")
 ```
 
-## 🔧 Configuration
+##  Configuration
 
 ### Basic Configuration (`config.py`)
 
@@ -144,7 +144,7 @@ CLASS_NAMES = [
 ]
 ```
 
-## 📊 Training Your First Model
+##  Training Your First Model
 
 ### Quick Training Script
 
@@ -204,10 +204,10 @@ for epoch in range(5):  # Quick demo with 5 epochs
     
     print(f"Epoch {epoch} average loss: {total_loss/len(train_loader):.4f}")
 
-print("✓ Training completed!")
+print(" Training completed!")
 ```
 
-## 🌐 API Server
+##  API Server
 
 ### Start the API Server
 
@@ -235,7 +235,7 @@ curl -X POST "http://localhost:8000/predict" \
      -F "file=@data/samples/pcb_defect.jpg"
 ```
 
-## 🐳 Docker Deployment
+##  Docker Deployment
 
 ### Build and Run
 
@@ -306,7 +306,7 @@ pytest -m "not slow"       # Skip slow tests
 pytest -n auto
 ```
 
-## 📈 Monitoring & Logging
+##  Monitoring & Logging
 
 ### Weights & Biases Integration
 
@@ -352,7 +352,7 @@ logger = logging.getLogger(__name__)
 logger.info("Training started")
 ```
 
-## 🎯 Next Steps
+##  Next Steps
 
 Congratulations! You now have a working PCB defect detection system. Here's what to explore next:
 
@@ -372,7 +372,7 @@ Congratulations! You now have a working PCB defect detection system. Here's what
 2. **[GitHub Issues](https://github.com/soumyajitghosh/pcb-defect-detection/issues)** - Report bugs or request features
 3. **[Discussions](https://github.com/soumyajitghosh/pcb-defect-detection/discussions)** - Ask questions and share ideas
 
-## 🆘 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -385,9 +385,9 @@ Congratulations! You now have a working PCB defect detection system. Here's what
 
 ### Getting Help
 
-- **Documentation**: You're reading it! 📖
-- **Issues**: [GitHub Issues](https://github.com/soumyajitghosh/pcb-defect-detection/issues) 🐛
-- **Discussions**: [GitHub Discussions](https://github.com/soumyajitghosh/pcb-defect-detection/discussions) 💬
-- **Email**: research@example.com 📧
+- **Documentation**: You're reading it! 
+- **Issues**: [GitHub Issues](https://github.com/soumyajitghosh/pcb-defect-detection/issues) 
+- **Discussions**: [GitHub Discussions](https://github.com/soumyajitghosh/pcb-defect-detection/discussions) 
+- **Email**: research@example.com 
 
-Ready to detect some defects? Let's go! 🚀
+Ready to detect some defects? Let's go! 

@@ -1,11 +1,11 @@
-# 🔍 Adaptive Foundation Models for PCB Defect Detection
+# Adaptive Foundation Models for PCB Defect Detection
 
-[![Paper](https://img.shields.io/badge/📄_Paper-IEEE-blue)](ieee_paper.pdf)
-[![License](https://img.shields.io/badge/📜_License-MIT-green)](#license)
-[![Python](https://img.shields.io/badge/🐍_Python-3.10+-blue)](https://python.org)
-[![Docker](https://img.shields.io/badge/🐳_Docker-Ready-blue)](Dockerfile)
-[![Tests](https://img.shields.io/badge/✅_Tests-Passing-green)](tests/)
-[![Colab](https://img.shields.io/badge/🚀_Try_in-Colab-yellow)](https://colab.research.google.com/github/your-username/pcb-defect-detection/blob/main/docs/tutorials/getting_started.ipynb)
+[![Paper](https://img.shields.io/badge/Paper-IEEE-blue)](ieee_paper.pdf)
+[![License](https://img.shields.io/badge/License-MIT-green)](#license)
+[![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://python.org)
+[![Docker](https://img.shields.io/badge/Docker-Ready-blue)](Dockerfile)
+[![Tests](https://img.shields.io/badge/Tests-Passing-green)](tests/)
+[![Colab](https://img.shields.io/badge/Try_in-Colab-yellow)](https://colab.research.google.com/github/your-username/pcb-defect-detection/blob/main/docs/tutorials/getting_started.ipynb)
 
 **A Parameter-Efficient, Data-Efficient, and Explainable System**
 
@@ -13,7 +13,7 @@
 
 This repository contains the complete implementation for our IEEE paper on adaptive foundation models for PCB (Printed Circuit Board) defect detection using parameter-efficient fine-tuning techniques. Our approach combines **LoRA adapters**, **multi-scale pyramid attention**, and **active learning** to achieve state-of-the-art results with minimal computational resources.
 
-## 🎯 **Key Results**
+## **Key Results**
 
 ![Performance Comparison](docs/figures/performance_comparison.png)
 
@@ -22,7 +22,7 @@ This repository contains the complete implementation for our IEEE paper on adapt
 - **600x parameter efficiency** compared to full fine-tuning
 - **Production-ready** FastAPI deployment with Docker support
 
-## 📊 **Research Insights**
+## **Research Insights**
 
 <div align="center">
 <img src="docs/figures/ablation_accuracy_params.png" width="45%" alt="Parameter Efficiency">
@@ -34,9 +34,9 @@ This repository contains the complete implementation for our IEEE paper on adapt
 <img src="docs/figures/gradcam_analysis.png" width="45%" alt="Explainability">
 </div>
 
-## 🚀 **Quick Start Guide**
+## **Quick Start Guide**
 
-### 💻 **Option 1: Local Installation (Recommended)**
+### **Option 1: Local Installation (Recommended)**
 
 #### **Step 1: Prerequisites**
 ```bash
@@ -75,15 +75,15 @@ pip install -r requirements.txt
 python demo.py
 
 # Expected output:
-# 🔍 PCB Defect Detection Demo
+#  PCB Defect Detection Demo
 # Loading model...
 # Processing sample images...
-# ✓ Image 1: short_circuit (confidence: 0.923)
-# ✓ Image 2: solder_bridge (confidence: 0.847)
+#  Image 1: short_circuit (confidence: 0.923)
+#  Image 2: solder_bridge (confidence: 0.847)
 # Demo completed successfully!
 ```
 
-### 🐳 **Option 2: Docker (Production Ready)**
+###  **Option 2: Docker (Production Ready)**
 
 #### **Step 1: Install Docker**
 ```bash
@@ -121,7 +121,7 @@ curl -X POST "http://localhost:8000/predict" \
 # {"class": "short_circuit", "confidence": 0.923, "processing_time": 0.012}
 ```
 
-### ⚡ **Option 3: One-Line Setup (Advanced)**
+###  **Option 3: One-Line Setup (Advanced)**
 ```bash
 # Complete automated setup
 make setup && make demo
@@ -133,7 +133,7 @@ make setup && make demo
 # 4. Start demo
 ```
 
-## 📚 **Detailed Usage Guide**
+##  **Detailed Usage Guide**
 
 ### **1. Basic Inference (Python API)**
 
@@ -335,7 +335,7 @@ plt.savefig('explainability_result.png')
 plt.show()
 ```
 
-## 📊 **Architecture Overview**
+##  **Architecture Overview**
 
 Our system adapts foundation models (ResNet, CLIP) using **Low-Rank Adaptation (LoRA)** with several key innovations:
 
@@ -357,7 +357,7 @@ Our system adapts foundation models (ResNet, CLIP) using **Low-Rank Adaptation (
    - Physics-aware defect synthesis
    - Domain-specific augmentation strategies
 
-## 🔧 **Usage Examples**
+##  **Usage Examples**
 
 ### **Basic Inference**
 ```python
@@ -400,7 +400,7 @@ curl -X POST "http://localhost:8000/predict" \
      -F "file=@pcb_sample.jpg"
 ```
 
-## 📈 **Performance Benchmarks**
+##  **Performance Benchmarks**
 
 | Method | Accuracy (%) | Trainable Params (%) | Inference (ms) | Memory (GB) |
 |--------|-------------|---------------------|----------------|-------------|
@@ -409,7 +409,7 @@ curl -X POST "http://localhost:8000/predict" \
 | + Synthetic Data | 83.7 | 2.13 | 10 | 2.3 |
 | **+ Multi-Scale (Ours)** | **90.5** | **2.13** | **10** | **2.3** |
 
-## 🎓 **Citation**
+##  **Citation**
 
 If you use this work in your research, please cite our paper:
 
@@ -422,33 +422,33 @@ If you use this work in your research, please cite our paper:
 }
 ```
 
-## 📁 **Repository Structure**
+##  **Repository Structure**
 
 ```
 pcb-defect-detection/
-├── 📂 core/                          # Core implementation
-│   └── foundation_adapter.py         # Main model adapter
-├── 📂 methods/                       # Adaptation methods
-│   └── ad_clip.py                   # CLIP adaptation
-├── 📂 api/                          # FastAPI server
-│   └── inference.py                 # Inference endpoints
-├── 📂 enhanced_pcb_training/        # Training modules
-├── 📂 synthetic_data/               # Data generation
-├── 📂 advanced_ml_techniques/       # Advanced ML methods
-├── 📂 evaluation/                   # Evaluation scripts
-├── 📂 tests/                        # Unit tests
-├── 📂 docs/                         # Documentation
-│   ├── installation.md
-│   ├── quickstart.md
-│   └── tutorials/
-├── 📄 ieee_paper.pdf               # Research paper
-├── 📄 demo.py                      # Working demo
-├── 🐳 Dockerfile                   # Container setup
-├── ⚙️ Makefile                     # Build automation
-└── 📋 requirements.txt             # Dependencies
+  core/                          # Core implementation
+    foundation_adapter.py         # Main model adapter
+  methods/                       # Adaptation methods
+    ad_clip.py                   # CLIP adaptation
+  api/                          # FastAPI server
+    inference.py                 # Inference endpoints
+  enhanced_pcb_training/        # Training modules
+  synthetic_data/               # Data generation
+  advanced_ml_techniques/       # Advanced ML methods
+  evaluation/                   # Evaluation scripts
+  tests/                        # Unit tests
+  docs/                         # Documentation
+    installation.md
+    quickstart.md
+    tutorials/
+  ieee_paper.pdf               # Research paper
+  demo.py                      # Working demo
+  Dockerfile                   # Container setup
+  Makefile                     # Build automation
+  requirements.txt             # Dependencies
 ```
 
-## 🛠️ **Development**
+##  **Development**
 
 ### **Setup Development Environment**
 ```bash
@@ -482,7 +482,7 @@ visualizer = GradCAMVisualizer(model)
 heatmap = visualizer.generate_heatmap(image, target_class='short_circuit')
 ```
 
-## 🐳 **Docker Deployment**
+##  **Docker Deployment**
 
 ### **Development**
 ```bash
@@ -513,7 +513,7 @@ pytest tests/test_foundation_adapter.py -v
 pytest tests/ --cov=core --cov-report=html
 ```
 
-## 💻 **System Requirements**
+##  **System Requirements**
 
 ### **Minimum Requirements**
 - **OS**: macOS 10.15+, Ubuntu 18.04+, Windows 10+
@@ -547,7 +547,7 @@ python -c "import torch; print(f'CUDA available: {torch.cuda.is_available()}')"
 python -c "import torch; print(f'MPS available: {torch.backends.mps.is_available()}')"
 ```
 
-## 🚑 **Troubleshooting**
+##  **Troubleshooting**
 
 ### **Common Installation Issues**
 
@@ -655,14 +655,14 @@ elif torch.backends.mps.is_available():
 ```python
 # Ensure correct directory structure:
 # data/
-# ├── train/
-# │   ├── class1/
-# │   │   ├── image1.jpg
-# │   │   └── image2.jpg
-# │   └── class2/
-# └── val/
-#     ├── class1/
-#     └── class2/
+#  train/
+#     class1/
+#        image1.jpg
+#        image2.jpg
+#     class2/
+#  val/
+#      class1/
+#      class2/
 
 from torchvision import datasets
 dataset = datasets.ImageFolder('data/train')
@@ -691,7 +691,7 @@ If you encounter issues not covered here, please [open an issue](https://github.
 - Steps to reproduce
 - Expected vs actual behavior
 
-## 📖 **Documentation**
+##  **Documentation**
 
 - **[Installation Guide](docs/installation.md)** - Detailed setup instructions
 - **[Quick Start Tutorial](docs/quickstart.md)** - Get started in 5 minutes  
@@ -711,18 +711,18 @@ We welcome contributions! Please see our contributing guidelines:
 7. Push to the branch (`git push origin feature/amazing-feature`)
 8. Open a Pull Request
 
-## 📄 **License**
+##  **License**
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 **Acknowledgments**
+##  **Acknowledgments**
 
 - Foundation models: OpenAI CLIP, Facebook ResNet
 - LoRA implementation inspired by Microsoft's LoRA paper
 - Active learning strategies based on recent AL literature
 - Industrial partners for providing real PCB datasets
 
-## 📞 **Support**
+##  **Support**
 
 - **Issues**: [GitHub Issues](https://github.com/your-username/pcb-defect-detection/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/your-username/pcb-defect-detection/discussions)
@@ -730,4 +730,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-⭐ **Star this repository** if you find it useful for your research or applications!
+ **Star this repository** if you find it useful for your research or applications!

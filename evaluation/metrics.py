@@ -866,7 +866,7 @@ def evaluate_adaptation(model, source_loader, target_loader, domain_name: str,
 
 if __name__ == "__main__":
     # Demonstration of evaluation metrics
-    print("🔬 Foundation Model Adaptation Evaluation")
+    print(" Foundation Model Adaptation Evaluation")
     print("=" * 50)
     
     # Create dummy data for demonstration
@@ -884,10 +884,10 @@ if __name__ == "__main__":
     
     transfer_results = transfer_metric.compute_transfer_score(source_logits, target_logits)
     
-    print("📊 Transfer Score Results:")
+    print(" Transfer Score Results:")
     for key, value in transfer_results.items():
         print(f"  {key}: {value:.4f}")
     
-    print(f"\n✨ Evaluation framework ready!")
-    print(f"🎯 Metrics: Transfer Score, CDC, Corruption Robustness")
-    print(f"📈 Focus: Unsupervised evaluation, parameter efficiency")
+    print(f"\n Evaluation framework ready!")
+    print(f" Metrics: Transfer Score, CDC, Corruption Robustness")
+    print(f" Focus: Unsupervised evaluation, parameter efficiency")

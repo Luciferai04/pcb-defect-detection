@@ -114,10 +114,10 @@ class TestSelfSupervisedLearning(TestEnhancedModules):
             assert projections.shape[0] == self.batch_size * 2  # Two views
             assert projections.shape[1] == 128  # Projection dim
             
-            print("✅ SimCLR forward pass test passed")
+            print(" SimCLR forward pass test passed")
             
         except ImportError as e:
-            print(f"⚠️ SimCLR test skipped due to import error: {e}")
+            print(f" SimCLR test skipped due to import error: {e}")
     
     def test_pcb_augmentation(self):
         """Test PCB-specific augmentations"""
@@ -131,10 +131,10 @@ class TestSelfSupervisedLearning(TestEnhancedModules):
             assert view2.shape == self.dummy_images.shape
             assert not torch.equal(view1, view2)  # Should be different
             
-            print("✅ PCB augmentation test passed")
+            print(" PCB augmentation test passed")
             
         except ImportError as e:
-            print(f"⚠️ PCB augmentation test skipped: {e}")
+            print(f" PCB augmentation test skipped: {e}")
     
     def test_contrastive_learning(self):
         """Test contrastive learning components"""
@@ -155,10 +155,10 @@ class TestSelfSupervisedLearning(TestEnhancedModules):
             assert q.shape[1] == 256  # Projection dim
             assert k.shape[1] == 256
             
-            print("✅ Contrastive learning test passed")
+            print(" Contrastive learning test passed")
             
         except ImportError as e:
-            print(f"⚠️ Contrastive learning test skipped: {e}")
+            print(f" Contrastive learning test skipped: {e}")
 
 class TestActiveLearning(TestEnhancedModules):
     """Test active learning components"""
@@ -175,10 +175,10 @@ class TestActiveLearning(TestEnhancedModules):
             assert len(selected_indices) <= 2
             assert len(scores) == len(selected_indices)
             
-            print("✅ Uncertainty sampling test passed")
+            print(" Uncertainty sampling test passed")
             
         except ImportError as e:
-            print(f"⚠️ Uncertainty sampling test skipped: {e}")
+            print(f" Uncertainty sampling test skipped: {e}")
     
     def test_diversity_sampling(self):
         """Test diversity sampling strategy"""
@@ -190,10 +190,10 @@ class TestActiveLearning(TestEnhancedModules):
             
             assert len(selected_indices) <= 2
             
-            print("✅ Diversity sampling test passed")
+            print(" Diversity sampling test passed")
             
         except ImportError as e:
-            print(f"⚠️ Diversity sampling test skipped: {e}")
+            print(f" Diversity sampling test skipped: {e}")
     
     def test_bayesian_uncertainty(self):
         """Test Bayesian uncertainty estimation"""
@@ -208,10 +208,10 @@ class TestActiveLearning(TestEnhancedModules):
             assert aleat_unc.shape[0] == self.batch_size
             assert epist_unc.shape[0] == self.batch_size
             
-            print("✅ Bayesian uncertainty test passed")
+            print(" Bayesian uncertainty test passed")
             
         except ImportError as e:
-            print(f"⚠️ Bayesian uncertainty test skipped: {e}")
+            print(f" Bayesian uncertainty test skipped: {e}")
 
 class TestAdversarialTraining(TestEnhancedModules):
     """Test adversarial training components"""
@@ -231,10 +231,10 @@ class TestAdversarialTraining(TestEnhancedModules):
             assert config.num_steps == 10
             assert config.preserve_structure == True
             
-            print("✅ Adversarial config test passed")
+            print(" Adversarial config test passed")
             
         except ImportError as e:
-            print(f"⚠️ Adversarial config test skipped: {e}")
+            print(f" Adversarial config test skipped: {e}")
     
     def test_fgsm_attack(self):
         """Test FGSM attack generation"""
@@ -251,10 +251,10 @@ class TestAdversarialTraining(TestEnhancedModules):
             assert not torch.equal(x_adv, self.dummy_images)  # Should be perturbed
             assert torch.all(x_adv >= 0) and torch.all(x_adv <= 1)  # Valid range
             
-            print("✅ FGSM attack test passed")
+            print(" FGSM attack test passed")
             
         except ImportError as e:
-            print(f"⚠️ FGSM attack test skipped: {e}")
+            print(f" FGSM attack test skipped: {e}")
     
     def test_pgd_attack(self):
         """Test PGD attack generation"""
@@ -271,10 +271,10 @@ class TestAdversarialTraining(TestEnhancedModules):
             assert not torch.equal(x_adv, self.dummy_images)
             assert torch.all(x_adv >= 0) and torch.all(x_adv <= 1)
             
-            print("✅ PGD attack test passed")
+            print(" PGD attack test passed")
             
         except ImportError as e:
-            print(f"⚠️ PGD attack test skipped: {e}")
+            print(f" PGD attack test skipped: {e}")
     
     def test_trades_loss(self):
         """Test TRADES loss computation"""
@@ -295,10 +295,10 @@ class TestAdversarialTraining(TestEnhancedModules):
             assert 'natural' in loss_dict
             assert 'robust' in loss_dict
             
-            print("✅ TRADES loss test passed")
+            print(" TRADES loss test passed")
             
         except ImportError as e:
-            print(f"⚠️ TRADES loss test skipped: {e}")
+            print(f" TRADES loss test skipped: {e}")
 
 class TestCrossDomainTraining(TestEnhancedModules):
     """Test cross-domain training components"""
@@ -317,10 +317,10 @@ class TestCrossDomainTraining(TestEnhancedModules):
             assert adapter.source_model is not None
             assert adapter.target_model is not None
             
-            print("✅ Cross-domain adapter test passed")
+            print(" Cross-domain adapter test passed")
             
         except ImportError as e:
-            print(f"⚠️ Cross-domain adapter test skipped: {e}")
+            print(f" Cross-domain adapter test skipped: {e}")
 
 class TestFederatedLearning(TestEnhancedModules):
     """Test federated learning components"""
@@ -336,10 +336,10 @@ class TestFederatedLearning(TestEnhancedModules):
             assert fed_learner.model is not None
             assert len(fed_learner.clients) == 3
             
-            print("✅ Federated learner test passed")
+            print(" Federated learner test passed")
             
         except ImportError as e:
-            print(f"⚠️ Federated learner test skipped: {e}")
+            print(f" Federated learner test skipped: {e}")
 
 class TestExplainableAI(TestEnhancedModules):
     """Test explainable AI components"""
@@ -353,10 +353,10 @@ class TestExplainableAI(TestEnhancedModules):
             
             assert explainer.model is not None
             
-            print("✅ Explainable AI initialization test passed")
+            print(" Explainable AI initialization test passed")
             
         except ImportError as e:
-            print(f"⚠️ Explainable AI test skipped: {e}")
+            print(f" Explainable AI test skipped: {e}")
     
     @patch('matplotlib.pyplot.show')
     def test_attention_visualization(self, mock_show):
@@ -372,10 +372,10 @@ class TestExplainableAI(TestEnhancedModules):
             # Check if show was called
             mock_show.assert_called_once()
             
-            print("✅ Attention visualization test passed")
+            print(" Attention visualization test passed")
             
         except ImportError as e:
-            print(f"⚠️ Attention visualization test skipped: {e}")
+            print(f" Attention visualization test skipped: {e}")
 
 class TestEdgeDeployment(TestEnhancedModules):
     """Test edge deployment optimization"""
@@ -390,10 +390,10 @@ class TestEdgeDeployment(TestEnhancedModules):
             
             assert optimized_model is not None
             
-            print("✅ Edge optimizer test passed")
+            print(" Edge optimizer test passed")
             
         except ImportError as e:
-            print(f"⚠️ Edge optimizer test skipped: {e}")
+            print(f" Edge optimizer test skipped: {e}")
 
 class TestIntegration(TestEnhancedModules):
     """Integration tests for multiple modules"""
@@ -416,10 +416,10 @@ class TestIntegration(TestEnhancedModules):
             assert 'epistemic_uncertainty' in results
             assert 'predictive_entropy' in results
             
-            print("✅ Ensemble uncertainty test passed")
+            print(" Ensemble uncertainty test passed")
             
         except ImportError as e:
-            print(f"⚠️ Ensemble uncertainty test skipped: {e}")
+            print(f" Ensemble uncertainty test skipped: {e}")
     
     def test_knowledge_distillation(self):
         """Test knowledge distillation"""
@@ -436,10 +436,10 @@ class TestIntegration(TestEnhancedModules):
             assert isinstance(loss, torch.Tensor)
             assert loss.item() >= 0
             
-            print("✅ Knowledge distillation test passed")
+            print(" Knowledge distillation test passed")
             
         except ImportError as e:
-            print(f"⚠️ Knowledge distillation test skipped: {e}")
+            print(f" Knowledge distillation test skipped: {e}")
 
 def run_comprehensive_tests():
     """Run all tests and generate report"""
@@ -465,7 +465,7 @@ def run_comprehensive_tests():
     }
     
     for test_class in test_classes:
-        print(f"\n📋 Testing {test_class.__name__}")
+        print(f"\n Testing {test_class.__name__}")
         print("-" * 50)
         
         # Get all test methods
@@ -487,28 +487,28 @@ def run_comprehensive_tests():
                 
             except ImportError:
                 results['skipped'] += 1
-                print(f"⚠️ {method_name} skipped (import error)")
+                print(f" {method_name} skipped (import error)")
                 
             except Exception as e:
                 results['failed'] += 1
-                print(f"❌ {method_name} failed: {str(e)}")
+                print(f" {method_name} failed: {str(e)}")
     
     # Generate test report
     print("\n" + "=" * 80)
-    print("📊 TEST SUMMARY REPORT")
+    print(" TEST SUMMARY REPORT")
     print("=" * 80)
-    print(f"✅ Passed: {results['passed']}")
-    print(f"❌ Failed: {results['failed']}")
-    print(f"⚠️ Skipped: {results['skipped']}")
-    print(f"📈 Total: {results['total']}")
-    print(f"🎯 Success Rate: {results['passed']/results['total']*100:.1f}%")
+    print(f" Passed: {results['passed']}")
+    print(f" Failed: {results['failed']}")
+    print(f" Skipped: {results['skipped']}")
+    print(f" Total: {results['total']}")
+    print(f" Success Rate: {results['passed']/results['total']*100:.1f}%")
     
     # Save test report
     report_path = "/Users/soumyajitghosh/research/test_report.json"
     with open(report_path, 'w') as f:
         json.dump(results, f, indent=2)
     
-    print(f"\n📄 Test report saved to: {report_path}")
+    print(f"\n Test report saved to: {report_path}")
     
     return results
 

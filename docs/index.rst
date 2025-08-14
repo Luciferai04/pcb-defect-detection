@@ -15,14 +15,14 @@ PCB Defect Detection Research Documentation
 
 Welcome to the comprehensive documentation for the **PCB Defect Detection Research** project, a state-of-the-art foundation model adaptation framework for industrial quality control.
 
-🎯 **Research Achievements**
+ **Research Achievements**
 
 - **90.5% accuracy** on PCB defect classification
 - **98.8% parameter efficiency** (only 1.76% trainable parameters)
 - **Real-time inference** capability for industrial deployment
 - **Cross-domain validation** across 4+ specialized domains
 
-🔬 **Key Innovations**
+ **Key Innovations**
 
 - **LoRA Adaptation**: Parameter-efficient fine-tuning with <2% trainable parameters
 - **Multi-Scale Pyramid Attention**: Novel attention mechanism for fine-grained defect detection

@@ -70,7 +70,7 @@ lint:
 format:
 	black .
 	isort .
-	@echo "✓ Code formatted successfully"
+	@echo " Code formatted successfully"
 
 type-check:
 	mypy . --ignore-missing-imports
@@ -96,20 +96,20 @@ pdf:
 		--toc \
 		--metadata title="Adaptive Foundation Models for PCB Defect Detection" \
 		-o RESEARCH_PAPER_GENERATED.pdf || { echo "Pandoc export failed. Ensure a LaTeX engine (lualatex) is installed."; exit 1; }
-	@echo "✓ Exported RESEARCH_PAPER_GENERATED.pdf"
+	@echo " Exported RESEARCH_PAPER_GENERATED.pdf"
 	pandoc EXECUTIVE_SUMMARY.md \
 		--from gfm \
 		--pdf-engine=lualatex \
 		--template=docs/templates/pandoc_ieee_math.tex \
 		--metadata title="Executive Summary: PCB Defect Detection" \
 		-o EXECUTIVE_SUMMARY.pdf || true
-	@echo "✓ Exported EXECUTIVE_SUMMARY.pdf (if possible)"
+	@echo " Exported EXECUTIVE_SUMMARY.pdf (if possible)"
 
 # IEEE LaTeX build (requires latexmk or pdflatex)
 ieee:
 	@command -v latexmk /dev/null 21 || { echo "latexmk not found. Trying pdflatex+bibtex..."; pdflatex -interaction=nonstopmode ieee_paper.tex || { echo "Install MacTeX or TinyTeX, then rerun."; exit 1; }; bibtex ieee_paper || true; pdflatex -interaction=nonstopmode ieee_paper.tex; pdflatex -interaction=nonstopmode ieee_paper.tex; exit 0; }
 	latexmk -pdf -bibtex -interaction=nonstopmode ieee_paper.tex
-	@echo "✓ Built ieee_paper.pdf"
+	@echo " Built ieee_paper.pdf"
 
 docs-serve: docs
 	cd docs/_build/html && python -m http.server 8080
@@ -130,18 +130,18 @@ api-prod:
 
 inference:
 	@echo "Running inference on sample (synthetic) image..."
-	python3 -c "from enhanced_pcb_model import create_enhanced_model; import torch; model, _ = create_enhanced_model(); print('✓ Model inference test successful')"
+	python3 -c "from enhanced_pcb_model import create_enhanced_model; import torch; model, _ = create_enhanced_model(); print(' Model inference test successful')"
 
 # Docker commands
 docker:
 	docker build -t pcb-defect-detection:latest .
-	@echo "✓ Docker image built: pcb-defect-detection:latest"
+	@echo " Docker image built: pcb-defect-detection:latest"
 
 docker-run: docker
 	docker run -p 8000:8000 --name pcb-api pcb-defect-detection:latest
 
 docker-test: docker
-	docker run --rm pcb-defect-detection:latest python -c "import torch; print('PyTorch:', torch.__version__); from enhanced_pcb_model import create_enhanced_model; print('✓ Docker image test successful')"
+	docker run --rm pcb-defect-detection:latest python -c "import torch; print('PyTorch:', torch.__version__); from enhanced_pcb_model import create_enhanced_model; print(' Docker image test successful')"
 
 docker-stop:
 	docker stop pcb-api || true
@@ -169,14 +169,14 @@ clean:
 	rm -rf build/
 	rm -rf *.egg-info/
 	rm -rf .mypy_cache/
-	@echo "✓ Cleaned up generated files"
+	@echo " Cleaned up generated files"
 
 check-deps:
 	pip list --outdated
 
 security:
 	bandit -r . -f json -o bandit-report.json || echo "Security scan completed (check bandit-report.json)"
-	@echo "✓ Security scan completed"
+	@echo " Security scan completed"
 
 # Research-specific commands
 experiment:
@@ -190,15 +190,15 @@ performance:
 
 # Quality assurance
 qa: lint type-check test
-	@echo "✓ All quality assurance checks passed"
+	@echo " All quality assurance checks passed"
 
 # CI simulation
 ci: install-dev qa docs docker-test
-	@echo "✓ CI simulation completed successfully"
+	@echo " CI simulation completed successfully"
 
 # Development workflow
 dev-setup: setup-env install-dev
-	@echo "✓ Development environment setup complete"
+	@echo " Development environment setup complete"
 	@echo "Next steps:"
 	@echo "1. Activate virtual environment: source venv/bin/activate"
 	@echo "2. Run tests: make test"

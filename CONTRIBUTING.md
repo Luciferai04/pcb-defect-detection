@@ -2,7 +2,7 @@
 
 We welcome contributions to this project! This document provides guidelines for contributing.
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Python 3.10 or higher
@@ -28,7 +28,7 @@ pip install -e .
 pre-commit install
 ```
 
-## 🛠️ Development Workflow
+##  Development Workflow
 
 ### 1. Create a Branch
 ```bash
@@ -64,7 +64,7 @@ git push origin feature/your-feature-name
 # Then create a Pull Request on GitHub
 ```
 
-## 📝 Code Style
+##  Code Style
 
 ### Python Standards
 - Follow PEP 8
@@ -157,7 +157,7 @@ pytest --cov=core --cov-report=html
 pytest tests/test_foundation_adapter.py::TestFoundationAdapter::test_forward
 ```
 
-## 📚 Documentation
+##  Documentation
 
 ### Code Documentation
 - Use docstrings for all public functions, classes, and modules
@@ -194,7 +194,7 @@ def train_model(
     """
 ```
 
-## 🐛 Bug Reports
+##  Bug Reports
 
 When reporting bugs, please include:
 
@@ -232,7 +232,7 @@ Full error traceback here
 ```
 ```
 
-## 💡 Feature Requests
+##  Feature Requests
 
 When suggesting features:
 
@@ -241,7 +241,7 @@ When suggesting features:
 3. **Implementation ideas**: Rough ideas about implementation
 4. **Alternatives**: Alternative solutions you've considered
 
-## 📋 Pull Request Guidelines
+##  Pull Request Guidelines
 
 ### Before Submitting
 - [ ] Tests pass (`pytest`)
@@ -273,7 +273,7 @@ Brief description of changes.
 - [ ] No new warnings introduced
 ```
 
-## 🏷️ Release Process
+##  Release Process
 
 Releases follow semantic versioning (MAJOR.MINOR.PATCH):
 
@@ -295,11 +295,11 @@ Releases follow semantic versioning (MAJOR.MINOR.PATCH):
 - Be specific about your problem
 - Provide minimal reproducible examples
 
-## 📞 Contact
+##  Contact
 
 For questions about contributing:
 - Open an issue for bugs/features
 - Use GitHub Discussions for questions
 - Email: research@example.com
 
-Thank you for contributing! 🎉
+Thank you for contributing! 

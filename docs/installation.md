@@ -184,14 +184,14 @@ WANDB_PROJECT=pcb-defect-detection
 python -c "
 from core.foundation_adapter import create_foundation_adapter
 adapter = create_foundation_adapter('AD-CLIP', 'medical')
-print('✓ Foundation adapter created successfully')
+print(' Foundation adapter created successfully')
 "
 
 # Test enhanced model
 python -c "
 from enhanced_pcb_model import create_enhanced_model
 model, loss_fn = create_enhanced_model()
-print('✓ Enhanced PCB model created successfully')
+print(' Enhanced PCB model created successfully')
 "
 ```
 

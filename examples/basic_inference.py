@@ -165,7 +165,7 @@ def main():
             results_path = output_dir / f"{image_name}_results.json"
             save_results(prediction, args.image, str(results_path))
         
-        print("\n✓ Inference completed successfully!")
+        print("\n Inference completed successfully!")
         
     except Exception as e:
         print(f"Error during inference: {e}")

@@ -4,7 +4,7 @@
 
 set -e
 
-echo "🔍 PCB Defect Detection - Quick Setup"
+echo " PCB Defect Detection - Quick Setup"
 echo "===================================="
 echo ""
 
@@ -17,15 +17,15 @@ NC='\033[0m' # No Color
 
 # Function to print colored output
 print_status() {
-    echo -e "${GREEN}✓${NC} $1"
+    echo -e "${GREEN}${NC} $1"
 }
 
 print_warning() {
-    echo -e "${YELLOW}⚠${NC} $1"
+    echo -e "${YELLOW}${NC} $1"
 }
 
 print_error() {
-    echo -e "${RED}✗${NC} $1"
+    echo -e "${RED}${NC} $1"
 }
 
 print_info() {
@@ -155,24 +155,24 @@ import sys
 sys.path.append('.')
 try:
     from core.foundation_adapter import FoundationAdapter
-    print('✓ Core modules can be imported successfully')
+    print(' Core modules can be imported successfully')
 except ImportError as e:
-    print(f'✗ Import error: {e}')
+    print(f' Import error: {e}')
     sys.exit(1)
 except Exception as e:
-    print(f'⚠ Warning: {e}')
+    print(f' Warning: {e}')
 
 try:
     import torch
-    print(f'✓ PyTorch {torch.__version__} is available')
+    print(f' PyTorch {torch.__version__} is available')
     if torch.cuda.is_available():
-        print(f'✓ CUDA is available (GPU: {torch.cuda.get_device_name(0)})')
+        print(f' CUDA is available (GPU: {torch.cuda.get_device_name(0)})')
     elif hasattr(torch.backends, 'mps') and torch.backends.mps.is_available():
-        print('✓ Apple MPS is available')
+        print(' Apple MPS is available')
     else:
         print('ℹ Running on CPU (GPU acceleration not available)')
 except Exception as e:
-    print(f'⚠ PyTorch issue: {e}')
+    print(f' PyTorch issue: {e}')
 "
 }
 
@@ -197,22 +197,22 @@ main() {
     run_tests
     
     echo ""
-    echo "🎉 Setup completed successfully!"
+    echo " Setup completed successfully!"
     echo ""
-    echo "📋 Next steps:"
+    echo " Next steps:"
     echo "1. Activate the virtual environment: source venv/bin/activate"
     echo "2. Run the demo: python demo.py"
     echo "3. Start the API server: python -m api.main"
     echo "4. Check the documentation: open docs/quickstart.md"
     echo ""
-    echo "🔗 Useful commands:"
+    echo " Useful commands:"
     echo "- make test          # Run all tests"
     echo "- make lint          # Check code quality"
     echo "- make docs          # Generate documentation"
     echo "- make api           # Start API server"
     echo ""
-    echo "📖 For detailed usage, see: README.md"
-    echo "🐛 For issues, visit: https://github.com/your-username/pcb-defect-detection/issues"
+    echo " For detailed usage, see: README.md"
+    echo " For issues, visit: https://github.com/your-username/pcb-defect-detection/issues"
 }
 
 # Handle script arguments

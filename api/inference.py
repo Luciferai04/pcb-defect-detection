@@ -325,7 +325,7 @@ class PCBDefectInference:
         
         valid_results = len(results) - error_count
         
-        print(f"\n📊 Prediction Summary")
+        print(f"\n Prediction Summary")
         print(f"{'='*50}")
         print(f"Total images processed: {len(results)}")
         print(f"Successful predictions: {valid_results}")
@@ -335,7 +335,7 @@ class PCBDefectInference:
             print(f"Average confidence: {total_confidence/valid_results:.3f}")
             print(f"Average inference time: {total_inference_time/valid_results:.2f} ms")
             
-            print(f"\n🔍 Detection Results:")
+            print(f"\n Detection Results:")
             for class_name in self.class_names:
                 count = class_counts.get(class_name, 0)
                 percentage = (count / valid_results) * 100 if valid_results > 0 else 0
@@ -407,16 +407,16 @@ Examples:
             results = [result]
             
             if not args.quiet:
-                print(f"\n🔍 Prediction for {args.image}:")
+                print(f"\n Prediction for {args.image}:")
                 if 'error' in result:
-                    print(f"❌ Error: {result['error']}")
+                    print(f" Error: {result['error']}")
                 else:
-                    print(f"📋 Predicted class: {result['predicted_class']}")
-                    print(f"🎯 Confidence: {result['confidence']:.3f}")
-                    print(f"📝 Description: {result['description']}")
-                    print(f"⏱️ Inference time: {result['inference_time_ms']:.2f} ms")
+                    print(f" Predicted class: {result['predicted_class']}")
+                    print(f" Confidence: {result['confidence']:.3f}")
+                    print(f" Description: {result['description']}")
+                    print(f"⏱ Inference time: {result['inference_time_ms']:.2f} ms")
                     
-                    print(f"\n📊 All class probabilities:")
+                    print(f"\n All class probabilities:")
                     for class_name, prob in sorted(result['probabilities'].items(), 
                                                  key=lambda x: x[1], reverse=True):
                         print(f"  {class_name.replace('_', ' ').title()}: {prob:.3f}")

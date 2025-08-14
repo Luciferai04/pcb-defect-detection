@@ -680,7 +680,7 @@ def create_synthetic_dataset(generator: SyntheticDataGenerator,
 
 if __name__ == "__main__":
     # Demonstration of synthetic data generation
-    print("🔬 Synthetic Data Generation for Foundation Model Adaptation")
+    print(" Synthetic Data Generation for Foundation Model Adaptation")
     print("=" * 60)
     
     # Configuration for medical imaging domain
@@ -695,8 +695,8 @@ if __name__ == "__main__":
     device = "cuda" if torch.cuda.is_available() else "cpu"
     generator = SyntheticDataGenerator(config, device)
     
-    print(f"✅ Generator created on {device}")
-    print(f"📊 Configuration:")
+    print(f" Generator created on {device}")
+    print(f" Configuration:")
     print(f"  Classes: {config.num_classes}")
     print(f"  Latent dimension: {config.latent_dim}")
     print(f"  Feature matching weight: {config.feature_matching_weight}")
@@ -706,8 +706,8 @@ if __name__ == "__main__":
         test_samples = generator.generate_samples(num_samples=4, class_label=0, domain_id=0)
         print(f"🧪 Test generation successful: {test_samples.shape}")
     except Exception as e:
-        print(f"❌ Generation error: {e}")
+        print(f" Generation error: {e}")
     
-    print(f"\n✨ Synthetic data generator ready!")
-    print(f"🎯 Expected improvement: +6.3% with conditional generation")
-    print(f"📈 Focus: Data scarcity mitigation, domain-specific augmentation")
+    print(f"\n Synthetic data generator ready!")
+    print(f" Expected improvement: +6.3% with conditional generation")
+    print(f" Focus: Data scarcity mitigation, domain-specific augmentation")
