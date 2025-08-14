@@ -300,6 +300,6 @@ Releases follow semantic versioning (MAJOR.MINOR.PATCH):
 For questions about contributing:
 - Open an issue for bugs/features
 - Use GitHub Discussions for questions
-- Email: research@example.com
+- Email: jobsoumyajit6124@gmail.com
 
 Thank you for contributing! 

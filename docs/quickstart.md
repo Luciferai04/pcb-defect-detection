@@ -388,6 +388,6 @@ Congratulations! You now have a working PCB defect detection system. Here's what
 - **Documentation**: You're reading it! 
 - **Issues**: [GitHub Issues](https://github.com/soumyajitghosh/pcb-defect-detection/issues) 
 - **Discussions**: [GitHub Discussions](https://github.com/soumyajitghosh/pcb-defect-detection/discussions) 
-- **Email**: research@example.com 
+- **Email**: jobsoumyajit6124@gmail.com 
 
 Ready to detect some defects? Let's go! 

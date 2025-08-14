@@ -284,4 +284,4 @@ After installation:
 - **Documentation**: [Full Documentation](index.rst)
 - **Issues**: [GitHub Issues](https://github.com/soumyajitghosh/pcb-defect-detection/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/soumyajitghosh/pcb-defect-detection/discussions)
-- **Email**: research@example.com
+- **Email**: jobsoumyajit6124@gmail.com

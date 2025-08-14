@@ -416,7 +416,7 @@ If you use this work in your research, please cite our paper:
 ```bibtex
 @article{ghosh2025adaptive,
   title={Adaptive Foundation Models for PCB Defect Detection: A Parameter-Efficient, Data-Efficient, and Explainable System},
-  author={Ghosh, Soumyajit},
+  author={Ghosh, Soumyajit and Gupta, Priyadarshini and Vashishtha, Aryansh},
   journal={IEEE Conference on Computer Vision and Pattern Recognition},
   year={2025}
 }
@@ -726,7 +726,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Issues**: [GitHub Issues](https://github.com/your-username/pcb-defect-detection/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/your-username/pcb-defect-detection/discussions)
-- **Email**: research@example.com
+- **Email**: jobsoumyajit6124@gmail.com
 
 ---
 

@@ -43,9 +43,8 @@
 \title{Adaptive Foundation Models for PCB Defect Detection: A Parameter-Efficient, Data-Efficient, and Explainable System}
 
 % Authors
-\author{\IEEEauthorblockN{Soumyajit Ghosh}
-\IEEEauthorblockA{\textit{Industrial AI Lab}\\
-Email: research@example.com}}
+\author{\IEEEauthorblockN{Soumyajit Ghosh, Priyadarshini Gupta, Aryansh Vashishtha}
+\IEEEauthorblockA{Email: jobsoumyajit6124@gmail.com}}
 
 % Global line-breaking softening to avoid overfull boxes
 \sloppy
@@ -465,7 +464,7 @@ We document common failure modes observed during evaluation and the correspondin
 \end{table}
 
 \section{Reproducibility and Deployment}
-We provide FastAPI endpoints, CLI for batch inference, Docker containerization, tests, and documentation. Apple Silicon (MPS) acceleration yields \SI{\sim10}{ms} per image. The API exposes health, metadata, batch/single prediction, and reload endpoints. The CLI supports JSON/CSV outputs and deterministic seeds.
+We provide FastAPI endpoints, CLI for batch inference, Docker containerization, tests, and documentation. Apple Silicon (MPS) acceleration yields \SI{\sim10}{ms} per image. The API exposes health, metadata, batch/single prediction, and reload endpoints. The CLI supports JSON/CSV outputs and deterministic seeds. Complete implementation and reproduction materials are available at: \url{https://github.com/Luciferai04/pcb-defect-detection}.
 
 \section{Related Work}
 CNN backbones such as ResNet \cite{resnet} have long been standard for visual inspection and tend to excel when labeled data is sufficient for full fine-tuning. In data-scarce regimes, vision-language pretraining (e.g., CLIP \cite{clip}) offers strong representations with competitive zero-shot and linear-probe baselines, but benefits substantially from careful downstream adaptation. Parameter-efficient fine-tuning (PEFT) methods such as LoRA \cite{lora} inject low-rank adapters into attention and MLP projections, enabling substantial gains at a fraction of the trainable parameter count relative to full fine-tuning. For safety-critical manufacturing, interpretability is essential; gradient-based attribution (Grad-CAM \cite{gradcam}) provides class-conditional saliency that can be inspected by quality engineers. Our work combines these threads to deliver an end-to-end practical system that is both efficient and auditable for PCB QA.
