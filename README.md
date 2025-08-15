@@ -5,7 +5,7 @@
 [![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://python.org)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue)](Dockerfile)
 [![Tests](https://img.shields.io/badge/Tests-Passing-green)](tests/)
-[![Colab](https://img.shields.io/badge/Try_in-Colab-yellow)](https://colab.research.google.com/github/Luciferai04/pcb-defect-detection/blob/main/docs/tutorials/getting_started.ipynb)
+[![Colab](https://img.shields.io/badge/Try_in-Colab-yellow)](https://colab.research.google.com/github/Luciferai04/pcb-defect-detection/blob/main/docs/tutorials/AFM.ipynb)
 
 **A Parameter-Efficient, Data-Efficient, and Explainable System**
 
